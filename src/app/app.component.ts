@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ThemeService } from './theme.service';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +7,4 @@ import { ThemeService } from './theme.service';
 })
 export class AppComponent {
   title = 'portfolio-front';
-  isCollapsed = false;
-
-  constructor(private themeService: ThemeService) {}
-
-  toggleTheme(): void {
-    this.themeService.toggleTheme().then();
-  }
 }

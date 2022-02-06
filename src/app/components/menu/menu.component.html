@@ -1,0 +1,43 @@
+<ul
+    class="d-flex fw-bold menu ps-3 mt-5 justify-content-end"
+    nz-menu
+    nzMode="horizontal">
+    <span class="m-0">Thomas Sanceo</span>
+    <li
+        nz-menu-item
+    >
+        HOME
+    </li>
+    <li
+        nz-menu-item
+    >
+        ABOUT
+    </li>
+    <li
+        nz-menu-item
+    >
+        PORTFOLIO
+    </li>
+    <li
+        nz-menu-item
+    >
+        CONTACT
+    </li>
+    <button
+        [nzSize]="'large'"
+        class="d-flex align-items-center me-3 fw-bold"
+        nz-button
+        nzShape="round"
+        nzType="default">
+        DOWNLOAD CV
+        <i
+            nz-icon
+            nzType="download"></i>
+    </button>
+    <nz-switch
+        (click)="toggleTheme()"
+        [(ngModel)]="switchValue"
+        [nzCheckedChildren]="'🌙'"
+        [nzUnCheckedChildren]="'☀️'"
+    ></nz-switch>
+</ul>
