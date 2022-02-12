@@ -1,43 +1,60 @@
 <ul
-    class="d-flex fw-bold menu ps-3 mt-5 justify-content-end"
+    [class.reset-vh]="isHideMenu"
+    class="d-flex fw-bold menu pe-3 py-2 ps-5 mt-4 justify-content-between position-fixed"
     nz-menu
     nzMode="horizontal">
-    <span class="m-0">Thomas Sanceo</span>
-    <li
-        nz-menu-item
-    >
-        HOME
-    </li>
-    <li
-        nz-menu-item
-    >
-        ABOUT
-    </li>
-    <li
-        nz-menu-item
-    >
-        PORTFOLIO
-    </li>
-    <li
-        nz-menu-item
-    >
-        CONTACT
-    </li>
-    <button
-        [nzSize]="'large'"
-        class="d-flex align-items-center me-3 fw-bold"
-        nz-button
-        nzShape="round"
-        nzType="default">
-        DOWNLOAD CV
-        <i
-            nz-icon
-            nzType="download"></i>
-    </button>
-    <nz-switch
-        (click)="toggleTheme()"
-        [(ngModel)]="switchValue"
-        [nzCheckedChildren]="'🌙'"
-        [nzUnCheckedChildren]="'☀️'"
-    ></nz-switch>
+    <div class="d-flex me-auto align-items-center part-1">
+        <li class="m-0 logo fs-6 lh-sm">Thomas Sanceo</li>
+        <button
+            (click)="handleDropDownMenu()"
+            *ngIf="isDisplayDropDownMenu"
+            [nzSize]="'large'"
+            class="fs-4"
+            nz-button
+            nzShape="circle"
+            nzType="default"><i
+            [nzType]="iconMenu"
+            nz-icon></i></button>
+    </div>
+    <div
+        [class.d-none]="isHideMenu"
+        class="d-flex ms-auto align-items-center part-2">
+        <li
+            nz-menu-item
+        >
+            HOME
+        </li>
+        <li
+            nz-menu-item
+        >
+            ABOUT
+        </li>
+        <li
+            nz-menu-item
+        >
+            PORTFOLIO
+        </li>
+        <li
+            nz-menu-item
+        >
+            CONTACT
+        </li>
+        <button
+            [nzSize]="'large'"
+            class="d-flex align-items-center me-3 fw-bold btn-download"
+            nz-button
+            nzShape="round"
+            nzType="default">
+            DOWNLOAD CV
+            <i
+                nz-icon
+                nzType="download"></i>
+        </button>
+        <nz-switch
+            (click)="toggleTheme()"
+            [(ngModel)]="isDarkMode"
+            [nzCheckedChildren]="'🌙'"
+            [nzUnCheckedChildren]="'☀️'"
+        ></nz-switch>
+    </div>
 </ul>

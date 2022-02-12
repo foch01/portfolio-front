@@ -1,7 +1,51 @@
+@import (multiple) '../../../node_modules/ng-zorro-antd/src/style/themes/default';
+
 .menu {
-    position: fixed;
-    min-width: 80%;
+    min-width: 90%;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 80px;
+    box-shadow: 0 0 30px rgb(0 0 0 / 8%);
+    border: inherit;
+}
+
+.logo {
+    max-width: 120px;
+}
+
+.part-2 {
+    font-size: .8rem;
+}
+
+@media (max-width: @screen-md-max) {
+    .menu {
+        margin-top: 0 !important;
+        padding-left: 16px !important;
+        width: 100% !important;
+        border-radius: 0 !important;
+        flex-direction: column !important;
+        height: 100vh !important;
+        justify-content: flex-start !important;
+
+        .part-1 {
+            margin-right: inherit !important;
+            justify-content: space-between;
+        }
+
+        .part-2 {
+            flex-direction: column !important;
+            margin-left: 0 !important;
+            font-size: 1.3rem;
+            padding-top: 60px;
+
+            li {
+                padding-bottom: 10px;
+                padding-top: 10px;
+            }
+        }
+    }
+}
+
+.reset-vh {
+    height: inherit !important;
 }

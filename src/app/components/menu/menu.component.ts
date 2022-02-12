@@ -1,19 +1,42 @@
-import { Component } from '@angular/core';
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+import { Component, OnInit } from '@angular/core';
 import { ThemeService } from '../../theme/theme.service';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.less']
+  styleUrls: ['./menu.component.less'],
 })
-export class MenuComponent  {
+export class MenuComponent implements OnInit {
 
-  switchValue = false;
+  isDarkMode = false;
+  isHideMenu = false;
+  isDisplayDropDownMenu = false;
+  iconMenu = 'menu';
 
-  constructor(private themeService: ThemeService) {}
+  constructor(
+      private readonly themeService: ThemeService,
+      private readonly breakpointObserver: BreakpointObserver,
+  ) {}
+
+  ngOnInit(): void {
+    this.breakpointObserver.observe(['(max-width: 991px)']).subscribe((state: BreakpointState) => {
+      this.isHideMenu = state.matches;
+      this.isDisplayDropDownMenu = state.matches;
+    });
+  }
 
   async toggleTheme(): Promise<void> {
-    await this.themeService.toggleTheme()
-    this.switchValue = this.themeService.currentTheme === 'dark';
+    await this.themeService.toggleTheme();
+    this.isDarkMode = this.themeService.currentTheme === 'dark';
+  }
+
+  handleDropDownMenu(): void {
+    this.isHideMenu = !this.isHideMenu;
+    if (!this.isHideMenu) {
+      this.iconMenu = 'close';
+    } else {
+      this.iconMenu = 'menu';
+    }
   }
 }

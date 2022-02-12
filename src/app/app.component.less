@@ -1,1 +1,13 @@
+@import (multiple) '../../../node_modules/ng-zorro-antd/src/style/themes/default';
 
+.img {
+    object-position: center;
+    object-fit: cover;
+}
+
+@media (max-width: @screen-md-max) {
+    .img {
+        height: 70vh !important;
+        object-position: top !important;
+    }
+}
