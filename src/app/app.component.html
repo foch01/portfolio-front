@@ -2,14 +2,53 @@
     <app-menu></app-menu>
     <div class="row m-0">
         <div class="col-sm-12 col-md-12 col-lg-6 px-0">
-            <img
-                alt="Thomas Sanceo"
-                class="vh-100 img w-100"
-                src="assets/profile.jpg"
-            >
+            <div class="img-gradient">
+                <img
+                    alt="Thomas Sanceo"
+                    class="vh-100 img w-100"
+                    src="assets/profile.jpg"
+                >
+            </div>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-6">
-            <p>Content</p>
+        <div class="col-sm-12 col-md-12 col-lg-6 content d-flex justify-content-center flex-column">
+            <h1>Thomas Sanceo</h1>
+            <h2>Software Engineer</h2>
+            <p>Hello! I am an Android and Data engineer based in Paris France. The guiding quasar of my journey is
+                working on solutions that leverage best-practice technologies to deliver a top user experience. I love
+                all things android.</p>
+            <button
+                [nzSize]="'large'"
+                class="d-flex align-items-center me-3 fw-bold btn-download"
+                nz-button
+                nzShape="round"
+                nzType="default">
+                CONTACT ME
+                <i
+                    nz-icon
+                    nzType="right"></i>
+            </button>
+        </div>
+        <div class="col-lg-1 border-start sidebar position-fixed d-flex justify-content-end align-items-center py-3 flex-column">
+            <button
+                [nzSize]="'large'"
+                class="fs-4 social__button mb-3"
+                nz-button
+                nzShape="circle"
+                nzType="default"><i
+                class="social__button__icon"
+                nz-icon
+                nzTheme="outline"
+                nzType="linkedin"></i></button>
+            <button
+                [nzSize]="'large'"
+                class="fs-4 social__button mb-3"
+                nz-button
+                nzShape="circle"
+                nzType="default"><i
+                class="social__button__icon"
+                nz-icon
+                nzTheme="outline"
+                nzType="github"></i></button>
         </div>
     </div>
 </div>
