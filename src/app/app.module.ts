@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { fr_FR, NZ_I18N } from 'ng-zorro-antd/i18n';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
@@ -29,6 +30,7 @@ registerLocaleData(fr);
         ComponentsModule,
         NzButtonModule,
         NzIconModule,
+        NzDividerModule,
     ],
     providers: [AppInitializerProvider, { provide: NZ_I18N, useValue: fr_FR }],
     bootstrap: [AppComponent],
