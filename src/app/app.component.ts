@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
 import * as Typewriter from 'typewriter-effect/dist/core';
 
 @Component({
@@ -8,10 +9,45 @@ import * as Typewriter from 'typewriter-effect/dist/core';
 })
 export class AppComponent implements OnInit {
   title = 'portfolio-front';
+  slides = [
+    {
+      schools: [
+        {
+          date: '2017-2020',
+          name: 'IMIE - Institut de la Filière Numérique',
+          content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque debitis error et facilis fuga iure nemo nostrum obcaecati odio officia officiis, perferendis placeat praesentium qui quidem quisquam repellat suscipit velit.',
+        },
+        {
+          date: '2016-2017',
+          name: 'Code Académie',
+          content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque debitis error et facilis fuga iure nemo nostrum obcaecati odio officia officiis, perferendis placeat praesentium qui quidem quisquam repellat suscipit velit.',
+        },
+      ],
+    },
+    {
+      schools: [
+        {
+          date: '2012-2016',
+          name: 'BAC S - Lycée Kerneuzec',
+          content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque debitis error et facilis fuga iure nemo nostrum obcaecati odio officia officiis, perferendis placeat praesentium qui quidem quisquam repellat suscipit velit.',
+        },
+      ],
+    },
+  ];
+  @ViewChild(NzCarouselComponent, { static: false }) myCarousel!: NzCarouselComponent;
 
 
   ngOnInit() {
     this.handleTypewriter();
+  }
+
+  prev() {
+    this.myCarousel.pre();
+  }
+
+  next() {
+    console.log(this.myCarousel.activeIndex);
+    this.myCarousel.next();
   }
 
   private handleTypewriter(): void {

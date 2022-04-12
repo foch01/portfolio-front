@@ -15,13 +15,34 @@
     justify-content: center;
 }
 
-.typewriter {
-    color: @blue-5
+.blue-5 {
+    color: @blue-6
 }
 
 .circle-btn {
     width: 64px;
 }
+
+
+.list-style-none {
+    list-style: none;
+}
+
+.info-list > li > span:first-child {
+    width: 110px;
+    display: inline-block;
+}
+
+.info-list > li {
+    flex: 50%;
+}
+
+nz-carousel {
+    cursor: pointer;
+}
+
+
+//--------------- ANIMATION ---------------
 
 .bounce {
     animation: bounce 2s infinite;
@@ -38,6 +59,9 @@
         transform: translateY(-10px);
     }
 }
+
+
+//--------------- RESPONSIVE ---------------
 
 @media (max-width: @screen-md-max) {
     .img {

@@ -14,7 +14,7 @@
             <div class="part part-1 d-flex justify-content-center flex-column ps-5 pe-5">
                 <h1 class="fw-bold display-4">Thomas<br> Sanceo</h1>
                 <div
-                    class="text-uppercase typewriter fw-bold pb-4"
+                    class="text-uppercase blue-5 fw-bold pb-4"
                     id="typewriter"></div>
                 <p class="lh-lg">Hello! I am an Android and Data engineer based in Paris France. The guiding quasar
                     of my journey is
@@ -48,28 +48,130 @@
             </div>
             <div class="part part-2 p-5">
                 <h1 class="fw-bold display-4">About me</h1>
-                <p class="typewriter fw-bold pb-4">MY STORY</p>
-                <p class="lh-lg">Currently I am an Android Engineer at Vestiaire Collective. A proud holder of a first
+                <p class="blue-5 fw-bold pb-4">MY STORY</p>
+                <p class="lh-lg mb-4">Currently I am an Android Engineer at Vestiaire Collective. A proud holder of a
+                    first
                     class Bsc Hons
                     Degree in Computer Science from the University of Science and Technology Zimbabwe and an MSc in Data
                     Engineering. I have been working in the computing sphere for the past 5 years with some of the
                     experience gained from overseas internships</p>
-                <p class="lh-lg">As much as I appreciate my proficiency on the android platform, I also have some skills
+                <p class="lh-lg mb-4">As much as I appreciate my proficiency on the android platform, I also have some
+                    skills
                     in my arsenal
                     namely Data Science, Machine Learning, Exploratory Data Analysis, Data Engineering, Java (Kotlin),
                     Flask, Angular 2 and Web Development with the regular suite (HTML, CSS, Javascript)</p>
+                <ul class="list-style-none info-list fw-bold d-flex flex-wrap p-0">
+                    <li class="mb-3">
+                        <span class="blue-5">RESIDENCE:</span>
+                        <span>Rennes, France</span>
+                    </li>
+                    <li class="mb-3">
+                        <span class="blue-5">REMOTE:</span>
+                        <span>Around the world</span>
+                    </li>
+                    <li class="mb-3">
+                        <span class="blue-5">NATIONALITY:</span>
+                        <span>FRANCE</span>
+                    </li>
+                </ul>
             </div>
             <div class="part part-2 p-5">
-                <h1>Education</h1>
-                <p class="typewriter fw-bold">STUDIED AT</p>
-                <p>Hello! I am an Android and Data engineer based in Paris France. The guiding quasar of my journey is
-                    working on solutions that leverage best-practice technologies to deliver a top user experience. I
-                    love
-                    all things android.</p>
+                <h1 class="fw-bold display-4">Experience</h1>
+                <p class="blue-5 fw-bold pb-4">EXPERIENCE AT</p>
+                <div class="d-flex flex-column">
+                    <div class="experience mb-4">
+                        <div class="blue-5">08/2017 - 04/2022</div>
+                        <h3 class="fw-bold">apini - Needone</h3>
+                        <nz-steps
+                            nzDirection="vertical"
+                            nzSize="small">
+                            <nz-step
+                                nzDescription="A proxy to authenticate to more than 50 external APIs (Salesforce, pwc, Stealth...)."
+                                nzIcon="loading"
+                                nzStatus="process"
+                                nzTitle="Kering"></nz-step>
+                            <nz-step
+                                nzDescription="Application for group purchase."
+                                nzStatus="finish"
+                                nzTitle="Groupy"></nz-step>
+                            <nz-step
+                                nzDescription="For the management of clients of an accounting company."
+                                nzStatus="finish"
+                                nzTitle="e-carryon"></nz-step>
+                            <nz-step
+                                nzDescription="Slack application for manage team in remote work."
+                                nzStatus="finish"
+                                nzTitle="Lapala"></nz-step>
+                            <nz-step
+                                nzDescription="Application to certify copyrights in the blockchain."
+                                nzStatus="finish"
+                                nzTitle="BlockchainYourIp"></nz-step>
+                            <nz-step
+                                nzDescription="Application of jobbing."
+                                nzStatus="finish"
+                                nzTitle="Amazjob"
+                            ></nz-step>
+                        </nz-steps>
+                    </div>
+                    <div class="experience mb-4">
+                        <div class="blue-5">02/2017 - 06/2017</div>
+                        <h3 class="fw-bold">Agence Everest</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque debitis error et facilis
+                            fuga iure nemo nostrum obcaecati odio officia officiis, perferendis placeat praesentium qui
+                            quidem quisquam repellat suscipit velit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="part part-2 p-5">
+                <div class="d-flex align-items-center justify-content-between">
+                    <h1 class="fw-bold display-4">Education</h1>
+                    <div class="divider"></div>
+                    <div
+                        class="mb-4 d-flex nav-school">
+                        <button
+                            (click)="prev()"
+                            [nzSize]="'large'"
+                            class="d-flex align-items-center me-3 fw-bold btn-download circle-btn"
+                            nz-button
+                            nzShape="circle"
+                            nzType="default">
+                            <i
+                                nz-icon
+                                nzType="left"></i>
+                        </button>
+                        <button
+                            (click)="next()"
+                            [nzSize]="'large'"
+                            class="d-flex align-items-center me-3 fw-bold btn-download circle-btn"
+                            nz-button
+                            nzShape="circle"
+                            nzType="default">
+                            <i
+                                nz-icon
+                                nzType="right"></i>
+                        </button>
+                    </div>
+                </div>
+                <p class="blue-5 fw-bold pb-4">STUDIED AT</p>
+                <nz-carousel [nzEffect]="'scrollx'">
+                    <div
+                        *ngFor="let slide of slides"
+                        nz-carousel-content>
+                        <div class="d-flex">
+                            <div *ngFor="let school of slide.schools">
+                                <div class="school mb-4 pe-4">
+                                    <div class="blue-5">{{ school.date }}</div>
+                                    <h3 class="fw-bold fs-5">{{ school.name }}</h3>
+                                    <p>{{ school.content }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nz-carousel>
             </div>
             <div class="part part-2 p-5">
                 <h1>Skills</h1>
-                <p class="typewriter fw-bold">DEVELOPMENT ARSENAL</p>
+                <p class="blue-5 fw-bold">DEVELOPMENT ARSENAL</p>
                 <p>Hello! I am an Android and Data engineer based in Paris France. The guiding quasar of my journey is
                     working on solutions that leverage best-practice technologies to deliver a top user experience. I
                     love
@@ -77,7 +179,7 @@
             </div>
             <div class="part part-2 p-5">
                 <h1>Portfolio</h1>
-                <p class="typewriter fw-bold">LATEST WORKS</p>
+                <p class="blue-5 fw-bold">LATEST WORKS</p>
                 <p>Hello! I am an Android and Data engineer based in Paris France. The guiding quasar of my journey is
                     working on solutions that leverage best-practice technologies to deliver a top user experience. I
                     love
