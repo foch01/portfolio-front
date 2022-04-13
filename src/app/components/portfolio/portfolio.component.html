@@ -1,0 +1,86 @@
+<h1 class="fw-bold display-4">Portfolio</h1>
+<p class="blue-5 fw-bold">LATEST WORKS</p>
+<div class="d-flex flex-wrap justify-content-between gap-5 cards">
+            <nz-card (click)="handleOpenModalKering()"  [nzCover]="kering" nzHoverable style="width:100%">
+                <nz-card-meta nzDescription="A proxy to authenticate to more than 50 external APIs (Salesforce, pwc, Stealth...)." nzTitle="Kering"></nz-card-meta>
+                <div class="d-flex justify-content-between mt-3">
+                    <button (click)="handleOpenModalKering();$event.stopPropagation()" [nzSize]="'small'" nz-button nzType="primary">
+                        <i nz-icon nzType="plus"></i>
+                        details
+                    </button>
+                    <a [nzSize]="'small'" href="https://www.kering.com/" nz-button nzType="primary" target="_blank">
+                        <i nz-icon nzType="link"></i>
+                        View website
+                    </a>
+                </div>
+            </nz-card>
+            <ng-template #kering>
+                <img alt="example" class="img" src="./assets/kering.png" />
+            </ng-template>
+
+    <nz-card (click)="handleOpenModalGroupy()" [nzCover]="groupy" nzHoverable style="width:100%">
+        <nz-card-meta nzDescription="Application for group purchase." nzTitle="Groupy"></nz-card-meta>
+        <div class="d-flex justify-content-between mt-3">
+            <button (click)="handleOpenModalGroupy();$event.stopPropagation()" [nzSize]="'small'" nz-button nzType="primary">
+                <i nz-icon nzType="plus"></i>
+                details
+            </button>
+            <a [nzSize]="'small'" href="https://www.kering.com/" nz-button nzType="primary" target="_blank">
+                <i nz-icon nzType="link"></i>
+                View website
+            </a>
+        </div>
+    </nz-card>
+    <ng-template #groupy>
+        <img alt="example" class="img ps-5 pe-5" src="./assets/groupy.png"/>
+    </ng-template>
+    <nz-card [nzCover]="groupy" nzHoverable style="width:100%">
+        <nz-card-meta nzDescription="Application for group purchase." nzTitle="Groupy"></nz-card-meta>
+        <div class="d-flex justify-content-between mt-3">
+            <button (click)="handleOpenModalGroupy()" [nzSize]="'small'" nz-button nzType="primary">
+                <i nz-icon nzType="plus"></i>
+                details
+            </button>
+            <a [nzSize]="'small'" href="https://www.kering.com/" nz-button nzType="primary" target="_blank">
+                <i nz-icon nzType="link"></i>
+                View website
+            </a>
+        </div>
+    </nz-card>
+    <ng-template #groupy>
+        <img alt="example" class="img ps-5 pe-5" src="./assets/groupy.png"/>
+    </ng-template>
+    <nz-card [nzCover]="groupy" nzHoverable style="width:100%">
+        <nz-card-meta nzDescription="Application for group purchase." nzTitle="Groupy"></nz-card-meta>
+        <div class="d-flex justify-content-between mt-3">
+            <button (click)="handleOpenModalGroupy()" [nzSize]="'small'" nz-button nzType="primary">
+                <i nz-icon nzType="plus"></i>
+                details
+            </button>
+            <a [nzSize]="'small'" href="https://www.kering.com/" nz-button nzType="primary" target="_blank">
+                <i nz-icon nzType="link"></i>
+                View website
+            </a>
+        </div>
+    </nz-card>
+    <ng-template #groupy>
+        <img alt="example" class="img ps-5 pe-5" src="./assets/groupy.png"/>
+    </ng-template>
+    <nz-card [nzCover]="groupy" nzHoverable style="width:100%">
+        <nz-card-meta nzDescription="Application for group purchase." nzTitle="Groupy"></nz-card-meta>
+        <div class="d-flex justify-content-between mt-3">
+            <button (click)="handleOpenModalGroupy()" [nzSize]="'small'" nz-button nzType="primary">
+                <i nz-icon nzType="plus"></i>
+                details
+            </button>
+            <a [nzSize]="'small'" href="https://www.kering.com/" nz-button nzType="primary" target="_blank">
+                <i nz-icon nzType="link"></i>
+                View website
+            </a>
+        </div>
+    </nz-card>
+    <ng-template #groupy>
+        <img alt="example" class="img ps-5 pe-5" src="./assets/groupy.png"/>
+    </ng-template>
+</div>
+

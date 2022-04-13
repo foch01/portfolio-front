@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-sm-6 d-flex justify-content-center align-items-center">
+        <img
+            [src]="'./assets/' + data.imgName"
+            alt="kering"
+            width="100%">
+    </div>
+    <div class="col-sm-6">
+        <p class="fw-bold">Context:</p>
+        <p>{{data.description}}</p>
+        <p>
+            <span class="fw-bold">Role:</span>
+            <span> {{ data.role }}</span>
+        </p>
+        <figure>
+            <figcaption class="fw-bold">Technos:</figcaption>
+            <ul>
+                <li *ngFor="let techno of data.technos">{{ techno }}</li>
+            </ul>
+        </figure>
+        <figure>
+            <figcaption class="fw-bold">Missions:</figcaption>
+            <ul>
+                <li *ngFor="let mission of data.missions">{{ mission }}</li>
+            </ul>
+        </figure>
+    </div>
+</div>

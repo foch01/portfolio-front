@@ -39,17 +39,19 @@
         >
             CONTACT
         </li>
-        <button
+        <a
             [nzSize]="'large'"
-            class="d-flex align-items-center me-3 fw-bold btn-download"
+            class="d-flex align-items-center me-3 fw-bold btn-download pb-0"
+            href="./assets/cv.pdf"
             nz-button
             nzShape="round"
-            nzType="default">
+            nzType="default"
+            target="_blank">
             DOWNLOAD CV
             <i
                 nz-icon
                 nzType="download"></i>
-        </button>
+        </a>
         <nz-switch
             (click)="toggleTheme()"
             [(ngModel)]="isDarkMode"

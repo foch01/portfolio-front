@@ -46,7 +46,7 @@
                     </button>
                 </div>
             </div>
-            <div class="part part-2 p-5">
+            <div class="part p-5">
                 <h1 class="fw-bold display-4">About me</h1>
                 <p class="blue-5 fw-bold pb-4">MY STORY</p>
                 <p class="lh-lg mb-4">Currently I am an Android Engineer at Vestiaire Collective. A proud holder of a
@@ -75,7 +75,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="part part-2 p-5">
+            <div class="part p-5">
                 <h1 class="fw-bold display-4">Experience</h1>
                 <p class="blue-5 fw-bold pb-4">EXPERIENCE AT</p>
                 <div class="d-flex flex-column">
@@ -86,7 +86,7 @@
                             nzDirection="vertical"
                             nzSize="small">
                             <nz-step
-                                nzDescription="A proxy to authenticate to more than 50 external APIs (Salesforce, pwc, Stealth...)."
+                                [nzDescription]="kering"
                                 nzIcon="loading"
                                 nzStatus="process"
                                 nzTitle="Kering"></nz-step>
@@ -115,14 +115,14 @@
                     </div>
                     <div class="experience mb-4">
                         <div class="blue-5">02/2017 - 06/2017</div>
-                        <h3 class="fw-bold">Agence Everest</h3>
+                        <h3 class="fw-bold">Everest</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque debitis error et facilis
                             fuga iure nemo nostrum obcaecati odio officia officiis, perferendis placeat praesentium qui
                             quidem quisquam repellat suscipit velit.</p>
                     </div>
                 </div>
             </div>
-            <div class="part part-2 p-5">
+            <div class="part p-5">
                 <div class="d-flex align-items-center justify-content-between">
                     <h1 class="fw-bold display-4">Education</h1>
                     <div class="divider"></div>
@@ -169,22 +169,101 @@
                     </div>
                 </nz-carousel>
             </div>
-            <div class="part part-2 p-5">
-                <h1>Skills</h1>
+            <div class="part p-5">
+                <h1 class="fw-bold display-4">Skills</h1>
                 <p class="blue-5 fw-bold">DEVELOPMENT ARSENAL</p>
-                <p>Hello! I am an Android and Data engineer based in Paris France. The guiding quasar of my journey is
-                    working on solutions that leverage best-practice technologies to deliver a top user experience. I
-                    love
-                    all things android.</p>
+                <div class="d-flex flex-wrap">
+                    <div class="flex-50">
+                        <h3 class="fw-bold fs-5">Web Development</h3>
+                        <!--                        <div class="d-flex flex-column">-->
+                        <!--                            <nz-badge-->
+                        <!--                                nzStatus="success"-->
+                        <!--                                nzText="NestJS"></nz-badge>-->
+                        <!--                            <nz-badge-->
+                        <!--                                nzStatus="success"-->
+                        <!--                                nzText="TypeScript"></nz-badge>-->
+                        <!--                            <nz-badge-->
+                        <!--                                nzStatus="success"-->
+                        <!--                                nzText="ExpressJS"></nz-badge>-->
+                        <!--                            <nz-badge-->
+                        <!--                                nzStatus="success"-->
+                        <!--                                nzText="NodeJS"></nz-badge>-->
+                        <!--                            <nz-badge-->
+                        <!--                                nzStatus="blue"-->
+                        <!--                                nzText="Angular"></nz-badge>-->
+                        <!--                            <nz-badge-->
+                        <!--                                nzStatus="yellow"-->
+                        <!--                                nzText="ExpressJS"></nz-badge>-->
+                        <!--                            <nz-badge-->
+                        <!--                                nzStatus="orange"-->
+                        <!--                                nzText="NodeJS"></nz-badge>-->
+                        <!--                        </div>-->
+
+                        <ul>
+                            <li>NestJS</li>
+                            <li>TypeScript</li>
+                            <li>ExpressJS</li>
+                            <li>NodeJS</li>
+                            <li>Angular</li>
+                            <li>SCSS, LESS, BOM</li>
+                            <li>ng-zorro</li>
+                            <li>TypeORM</li>
+                            <li>Mongoose</li>
+                        </ul>
+                    </div>
+                    <div class="flex-50">
+                        <h3 class="fw-bold fs-5">DevOps</h3>
+                        <ul>
+                            <li>AWS</li>
+                            <li>Azure</li>
+                            <li>Grafana</li>
+                            <li>CloudFlare</li>
+                            <li>Docker</li>
+                            <li>Heroku</li>
+                        </ul>
+                    </div>
+                    <div class="flex-50">
+                        <h3 class="fw-bold fs-5">Tools</h3>
+                        <ul>
+                            <li>ELK</li>
+                            <li>Github, Gitlab</li>
+                            <li>Git</li>
+                            <li>puppeteer</li>
+                            <li>ngrok</li>
+                            <li>Heroku</li>
+                            <li>Photoshop, Premiere pro</li>
+                            <li>Figma</li>
+                        </ul>
+                    </div>
+                    <div class="flex-50">
+                        <h3 class="fw-bold fs-5">OS</h3>
+                        <ul>
+                            <li>UNIX</li>
+                            <li>MacOS</li>
+                            <li>Windows</li>
+                            <li>iOS</li>
+                            <li>Android</li>
+                        </ul>
+                    </div>
+                    <div class="flex-50">
+                        <h3 class="fw-bold fs-5">Database</h3>
+                        <ul>
+                            <li>Blockchain</li>
+                            <li>MongoDB</li>
+                            <li>NoSQL</li>
+                            <li>PostgreSQL</li>
+                        </ul>
+                    </div>
+                    <div class="flex-50">
+                        <h3 class="fw-bold fs-5">Methodology</h3>
+                        <ul>
+                            <li>Scrum</li>
+                            <li>Kanban</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="part part-2 p-5">
-                <h1>Portfolio</h1>
-                <p class="blue-5 fw-bold">LATEST WORKS</p>
-                <p>Hello! I am an Android and Data engineer based in Paris France. The guiding quasar of my journey is
-                    working on solutions that leverage best-practice technologies to deliver a top user experience. I
-                    love
-                    all things android.</p>
-            </div>
+            <app-portfolio class="part p-5"></app-portfolio>
         </div>
         <div class="col-lg-1 border-start sidebar position-fixed d-flex justify-content-end align-items-center py-3 flex-column">
             <button
@@ -210,3 +289,7 @@
         </div>
     </div>
 </div>
+
+<ng-template #kering>
+    <p>A proxy to authenticate to more than 50 external APIs (Salesforce, pwc, Stealth...).</p>
+</ng-template>

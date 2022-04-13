@@ -4,6 +4,7 @@ import fr from '@angular/common/locales/fr';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NzBadgeModule } from 'ng-zorro-antd/badge';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
@@ -35,6 +36,7 @@ registerLocaleData(fr);
         NzDividerModule,
         NzCarouselModule,
         NzStepsModule,
+        NzBadgeModule,
     ],
     providers: [AppInitializerProvider, { provide: NZ_I18N, useValue: fr_FR }],
     bootstrap: [AppComponent],
