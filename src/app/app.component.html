@@ -11,16 +11,16 @@
             </div>
         </div>
         <div class="offset-lg-5 col-sm-12 col-md-12 col-lg-6 content d-flex justify-content-center flex-column">
-            <div class="part part-1 d-flex justify-content-center flex-column ps-5 pe-5">
+            <div
+                class="part part-1 d-flex justify-content-center flex-column ps-5 pe-5"
+                id="intro">
                 <h1 class="fw-bold display-4">Thomas<br> Sanceo</h1>
                 <div
                     class="text-uppercase blue-5 fw-bold pb-4"
                     id="typewriter"></div>
-                <p class="lh-lg">Hello! I am an Android and Data engineer based in Paris France. The guiding quasar
-                    of my journey is
-                    working on solutions that leverage best-practice technologies to deliver a top user experience. I
-                    love
-                    all things android.</p>
+                <p class="lh-lg">I am a software engineer passionate about programming and web marketing. I have an
+                    attraction for clean code and devops. I make it my goal to look not only to my own interests, but
+                    also to the interests of others.</p>
                 <div class="d-flex">
                     <button
                         [nzSize]="'default'"
@@ -33,41 +33,50 @@
                             nz-icon
                             nzType="right"></i>
                     </button>
-                    <button
+                    <a
                         [nzSize]="'large'"
                         class="d-flex align-items-center me-3 fw-bold btn-download circle-btn"
+                        href="#about"
                         nz-button
                         nzShape="circle"
-                        nzType="default">
+                        nzType="default"
+                    >
                         <i
                             class="arrow bounce fw-bold"
                             nz-icon
                             nzType="down"></i>
-                    </button>
+                    </a>
                 </div>
             </div>
-            <div class="part p-5">
+            <div
+                class="anchor"
+                id="about"></div>
+            <div
+                class="part p-5"
+            >
                 <h1 class="fw-bold display-4">About me</h1>
                 <p class="blue-5 fw-bold pb-4">MY STORY</p>
-                <p class="lh-lg mb-4">Currently I am an Android Engineer at Vestiaire Collective. A proud holder of a
-                    first
-                    class Bsc Hons
-                    Degree in Computer Science from the University of Science and Technology Zimbabwe and an MSc in Data
-                    Engineering. I have been working in the computing sphere for the past 5 years with some of the
-                    experience gained from overseas internships</p>
-                <p class="lh-lg mb-4">As much as I appreciate my proficiency on the android platform, I also have some
-                    skills
-                    in my arsenal
-                    namely Data Science, Machine Learning, Exploratory Data Analysis, Data Engineering, Java (Kotlin),
-                    Flask, Angular 2 and Web Development with the regular suite (HTML, CSS, Javascript)</p>
+                <p class="lh-lg mb-4">
+                    I am currently a Web Developer specialized in back-end technologies (Javascript) but also familiar
+                    with
+                    front-end technologies (Javascript).
+                    I place a lot of importance on craftmanship and clean code. Not because those are buzzwords but
+                    because it brings real added value to software development.</p>
+                <p class="lh-lg mb-4">I hold a master's degree in software engineering acquired at IMIE in Rennes in
+                    Brittany.
+                    I acquired the majority of my experience in the Needone and apini company on different projects
+                    which are visible in my portfolio.</p>
+                <p class="lh-lg mb-4">I am also an entrepreneur in the field of web marketing.
+                    I am a former high-level athlete, member of the French jujitsu team and I am in love with sport.</p>
+                <p class="lh-lg mb-4">I love exploring new paths to become a better version of myself.</p>
                 <ul class="list-style-none info-list fw-bold d-flex flex-wrap p-0">
                     <li class="mb-3">
                         <span class="blue-5">RESIDENCE:</span>
                         <span>Rennes, France</span>
                     </li>
                     <li class="mb-3">
-                        <span class="blue-5">REMOTE:</span>
-                        <span>Around the world</span>
+                        <span class="blue-5">PASSIONS:</span>
+                        <span>Web development, entrepreneurship, sport</span>
                     </li>
                     <li class="mb-3">
                         <span class="blue-5">NATIONALITY:</span>
@@ -77,6 +86,9 @@
             </div>
             <div class="part p-5">
                 <h1 class="fw-bold display-4">Experience</h1>
+                <p class="fst-italic">For more details on the projects and my role on the projects you can look at the
+                    details in the
+                    <a href="#portfolio">portfolio part</a>.</p>
                 <p class="blue-5 fw-bold pb-4">EXPERIENCE AT</p>
                 <div class="d-flex flex-column">
                     <div class="experience mb-4">
@@ -89,25 +101,29 @@
                                 [nzDescription]="kering"
                                 nzIcon="loading"
                                 nzStatus="process"
-                                nzTitle="Kering"></nz-step>
+                                nzTitle="03/21 -> In progress - Kering - Back-end developer (Lead)"></nz-step>
                             <nz-step
-                                nzDescription="Application for group purchase."
+                                [nzDescription]="groupy"
                                 nzStatus="finish"
-                                nzTitle="Groupy"></nz-step>
+                                nzTitle="10/20 -> 03/21 - Groupy - Fullstack developer"></nz-step>
                             <nz-step
-                                nzDescription="For the management of clients of an accounting company."
+                                [nzDescription]="ecarryon"
                                 nzStatus="finish"
-                                nzTitle="e-carryon"></nz-step>
+                                nzTitle="01/20 -> 04/20 - e-carryon - Fullstack developer"></nz-step>
                             <nz-step
-                                nzDescription="Slack application for manage team in remote work."
+                                [nzDescription]="onestaff"
                                 nzStatus="finish"
-                                nzTitle="Lapala"></nz-step>
+                                nzTitle="09/19 -> 12/19 - Onestaff - Front-end and mobile developer"></nz-step>
                             <nz-step
-                                nzDescription="Application to certify copyrights in the blockchain."
+                                [nzDescription]="lapala"
+                                nzStatus="finish"
+                                nzTitle="01/2019 -> 08/2019 - Lapala - Back-end developer"></nz-step>
+                            <nz-step
+                                [nzDescription]="blockchainyourip"
                                 nzStatus="finish"
                                 nzTitle="BlockchainyourIp"></nz-step>
                             <nz-step
-                                nzDescription="Application of jobbing."
+                                [nzDescription]="amazjob"
                                 nzStatus="finish"
                                 nzTitle="Amazjob"
                             ></nz-step>
@@ -175,30 +191,6 @@
                 <div class="d-flex flex-wrap">
                     <div class="flex-50">
                         <h3 class="fw-bold fs-5">Web Development</h3>
-                        <!--                        <div class="d-flex flex-column">-->
-                        <!--                            <nz-badge-->
-                        <!--                                nzStatus="success"-->
-                        <!--                                nzText="NestJS"></nz-badge>-->
-                        <!--                            <nz-badge-->
-                        <!--                                nzStatus="success"-->
-                        <!--                                nzText="TypeScript"></nz-badge>-->
-                        <!--                            <nz-badge-->
-                        <!--                                nzStatus="success"-->
-                        <!--                                nzText="ExpressJS"></nz-badge>-->
-                        <!--                            <nz-badge-->
-                        <!--                                nzStatus="success"-->
-                        <!--                                nzText="NodeJS"></nz-badge>-->
-                        <!--                            <nz-badge-->
-                        <!--                                nzStatus="blue"-->
-                        <!--                                nzText="Angular"></nz-badge>-->
-                        <!--                            <nz-badge-->
-                        <!--                                nzStatus="yellow"-->
-                        <!--                                nzText="ExpressJS"></nz-badge>-->
-                        <!--                            <nz-badge-->
-                        <!--                                nzStatus="orange"-->
-                        <!--                                nzText="NodeJS"></nz-badge>-->
-                        <!--                        </div>-->
-
                         <ul>
                             <li>NestJS</li>
                             <li>TypeScript</li>
@@ -263,6 +255,9 @@
                     </div>
                 </div>
             </div>
+            <div
+                class="anchor"
+                id="portfolio"></div>
             <app-portfolio class="part p-5"></app-portfolio>
         </div>
         <div class="col-lg-1 border-start sidebar position-fixed d-flex justify-content-end align-items-center py-3 flex-column">
@@ -292,4 +287,65 @@
 
 <ng-template #kering>
     <p>A proxy to authenticate to more than 50 external APIs (Salesforce, pwc, Stealth...).</p>
+    <p>This project is at the heart of the integration of all the software of the Kering luxury group.</p>
+    <p>The goal is to add new integrations and maintain existing ones with a high volume of requests (around 30 million
+        per day).</p>
+    <p>The application must be highly available.</p>
+    <p><span class="fw-bold">Technos: </span><span>NestJS, ExpressJS, AWS, ELK, Kafka, Docker, Grafana, Terraform</span>
+    </p>
+</ng-template>
+
+<ng-template #groupy>
+    <p>Application for group purchase and selling.</p>
+    <p>It's a startup-type project that aims to revolutionize group buying and selling in a geolocated way.</p>
+    <p>Development in agile method with a back-office to manage listing products and users.</p>
+    <p><span class="fw-bold">Technos: </span><span>NestJS, Angular, Typescript, PostgreSQL, Heroku, Github</span>
+    </p>
+</ng-template>
+
+<ng-template #ecarryon>
+    <p>It's a startup type project in the accounting world.</p>
+    <p>It's objective is to manage the customers of an accounting company (VAT recovery, addition of input, calculation
+        of customer turnover, calculation VAT, etc.)</p>
+    <p>This project was bought by a historical company in the world of the compatibility</p>
+    <p><span class="fw-bold">Technos: </span><span>NestJS, Angular, Typescript, PostgreSQL, Heroku, Github</span>
+    </p>
+</ng-template>
+
+<ng-template #onestaff>
+    <p>Jobbing application for the restaurant and hotel industry.</p>
+    <p>It's a startup type project to connect restaurants and cooks during periods of high demand.</p>
+    <p>It is an application accessible on the web or on smartphone.</p>
+    <p><span class="fw-bold">Technos: </span><span>Angular, SASS, React Native, Github</span>
+    </p>
+</ng-template>
+
+<ng-template #lapala>
+    <p>Slack application for manage team in remote work.</p>
+    <p>It's an internal project of the startup type in the company in which I work (Intrapreneurship).</p>
+    <p>It is an application based on the Slack API that allows you to manage the team remotely.
+        The application allows the excel export of working time and team mood data per day.</p>
+    <p>This project has been successfully adopted in the company.</p>
+    <p><span class="fw-bold">Technos: </span><span>ExpressJS, Docker, Typescript, MongoDB, Slack API, Bitbucket</span>
+    </p>
+</ng-template>
+
+<ng-template #blockchainyourip>
+    <p>Application to certify copyrights in the blockchain.</p>
+    <p>This project is at the heart of the integration of all the software of the Kering luxury group.</p>
+    <p>The goal is to add new integrations and maintain existing ones with a high volume of requests (around 30 million
+        per day).</p>
+    <p>The application must be highly available.</p>
+    <p><span class="fw-bold">Technos: </span><span>NestJS, ExpressJS, AWS, ELK, Kafka, Docker, Grafana, Terraform</span>
+    </p>
+</ng-template>
+
+<ng-template #amazjob>
+    <p>Application of jobbing.</p>
+    <p>This project is at the heart of the integration of all the software of the Kering luxury group.</p>
+    <p>The goal is to add new integrations and maintain existing ones with a high volume of requests (around 30 million
+        per day).</p>
+    <p>The application must be highly available.</p>
+    <p><span class="fw-bold">Technos: </span><span>NestJS, ExpressJS, AWS, ELK, Kafka, Docker, Grafana, Terraform</span>
+    </p>
 </ng-template>

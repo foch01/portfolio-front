@@ -61,9 +61,9 @@ export class AppComponent implements OnInit {
 
     typewriter
         .pauseFor(2500)
-        .typeString('Developer')
+        .typeString('Web Developer')
         .pauseFor(1200)
-        .deleteChars(9)
+        .deleteChars(13)
         .typeString('Sportsman')
         .pauseFor(1200)
         .deleteChars(9)
