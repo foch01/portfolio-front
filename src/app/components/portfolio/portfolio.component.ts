@@ -17,10 +17,13 @@ export class PortfolioComponent implements OnInit {
   }
 
   public handleOpenModalKering() {
+    const elem = document.getElementById('sidebar');
+    elem!.classList.add('d-none');
     this.nzModalService.create({
       nzTitle: 'Kering',
       nzContent: ProjectModalComponent,
-      nzComponentParams: { data: {
+      nzComponentParams: {
+        data: {
           imgName: 'kering.png',
           description: 'Development and maintainability in agile method (Kanban) of a proxy with more than 30 million daily requests. A complex project connected to more than 50 micro-services available internationally for a luxury group. This project is composed in hexagonal architecture with particular attention to testing to ensure the quality of the code, deployed on the AWS cloud.\n' +
               '\n' +
@@ -37,10 +40,14 @@ export class PortfolioComponent implements OnInit {
             'Onboarding of new crew members',
           ],
           role: 'Back-end developer (Lead)',
-        }},
+        },
+      },
       nzCancelText: null,
-      nzWidth: 860
-    })
+      nzOnCancel: () => {
+        elem!.classList.remove('d-none');
+      },
+      nzWidth: 860,
+    });
   }
 
   public handleOpenModalGroupy() {
