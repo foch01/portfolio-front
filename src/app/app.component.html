@@ -1,14 +1,12 @@
 <div class="container-fluid p-0">
     <app-menu></app-menu>
     <div class="row m-0">
-        <div class="col-sm-12 col-md-12 col-lg-5 px-0 position-fixed">
-            <div class="img-gradient">
-                <img
-                    alt="Thomas Sanceo"
-                    class="vh-100 img w-100"
-                    src="assets/profile.jpeg"
-                >
-            </div>
+        <div class="col-sm-12 col-md-12 col-lg-5 px-0 position-fixed featured-img">
+            <img
+                alt="Thomas Sanceo"
+                class="vh-100 img w-100"
+                src="assets/profile.jpeg"
+            >
         </div>
         <div class="offset-lg-5 col-sm-12 col-md-12 col-lg-6 content d-flex justify-content-center flex-column">
             <div
@@ -18,13 +16,15 @@
                 <div
                     class="text-uppercase blue-5 fw-bold pb-4"
                     id="typewriter"></div>
-                <p class="lh-lg">I am a software engineer passionate about programming and web marketing. I have an
+                <p class="lh-lg text-xs-center">I am a software engineer passionate about programming and web marketing.
+                    I have an
                     attraction for clean code and devops. I make it my goal to look not only to my own interests, but
                     also to the interests of others.</p>
                 <div class="d-flex">
-                    <button
+                    <a
                         [nzSize]="'default'"
-                        class="d-flex align-items-center me-3 fw-bold btn-download"
+                        class="d-flex align-items-center me-3 fw-bold btn-download pb-0"
+                        href="mailto:sanceo.thomas@gmail.com"
                         nz-button
                         nzShape="round"
                         nzType="default">
@@ -32,7 +32,7 @@
                         <i
                             nz-icon
                             nzType="right"></i>
-                    </button>
+                    </a>
                     <a
                         [nzSize]="'large'"
                         class="d-flex align-items-center me-3 fw-bold btn-download circle-btn"
@@ -61,7 +61,7 @@
                     with
                     front-end technologies (Javascript).
                     I place a lot of importance on craftmanship and clean code. Not because those are buzzwords but
-                    because it brings real added value to software development.</p>
+                    because it brings real added value to software development of my point of view.</p>
                 <p class="lh-lg mb-4">I hold a master's degree in software engineering acquired at IMIE in Rennes in
                     Brittany.
                     I acquired the majority of my experience in the Needone and apini company on different projects
@@ -138,7 +138,8 @@
                         <h3 class="fw-bold">Everest</h3>
                         <p>During this mission, I was on an internship at the communication agency Everest.
                         </p>
-                        <p> I was in charge of the design, development and maintainability of different websites mainly:
+                        <p> I was in charge of the design, development and maintainability of different websites mainly
+                            for brands:
                             optima, arliane and CMVH.</p>
                         <p><span class="fw-bold">Technos: </span><span>Wordpress, Google analytics, Elementor</span>
                     </div>
@@ -175,16 +176,22 @@
                     </div>
                 </div>
                 <p class="blue-5 fw-bold pb-4">STUDIED AT</p>
-                <nz-carousel [nzEffect]="'scrollx'">
+                <nz-carousel
+                    [nzEffect]="'scrollx'"
+                    nzDots="false">
                     <div
                         *ngFor="let slide of slides"
                         nz-carousel-content>
-                        <div class="d-flex">
-                            <div *ngFor="let school of slide.schools">
+                        <div class="d-flex flex-wrap flex-column-xs">
+                            <div
+                                *ngFor="let school of slide.schools"
+                                class="flex-50">
                                 <div class="school mb-4 pe-4">
                                     <div class="blue-5">{{ school.date }}</div>
                                     <h3 class="fw-bold fs-5">{{ school.name }}</h3>
-                                    <p>{{ school.content }}</p>
+                                    <p>{{ school?.paragrapheOne }}</p>
+                                    <p>{{ school?.paragrapheTwo }}</p>
+                                    <p>{{ school?.paragrapheThree }}</p>
                                 </div>
                             </div>
                         </div>
@@ -194,7 +201,7 @@
             <div class="part p-5">
                 <h1 class="fw-bold display-4">Skills</h1>
                 <p class="blue-5 fw-bold">DEVELOPMENT ARSENAL</p>
-                <div class="d-flex flex-wrap">
+                <div class="d-flex flex-wrap flex-column-xs">
                     <div class="flex-50">
                         <h3 class="fw-bold fs-5">Web Development</h3>
                         <ul>
@@ -202,6 +209,7 @@
                             <li>TypeScript</li>
                             <li>ExpressJS</li>
                             <li>NodeJS</li>
+                            <li>Jest</li>
                             <li>Angular</li>
                             <li>SCSS, LESS, BOM</li>
                             <li>ng-zorro</li>
@@ -231,6 +239,9 @@
                             <li>Heroku</li>
                             <li>Photoshop, Premiere pro</li>
                             <li>Figma</li>
+                            <li>MangoPay API</li>
+                            <li>Slack API</li>
+                            <li>Google Maps API</li>
                         </ul>
                     </div>
                     <div class="flex-50">
@@ -297,7 +308,8 @@
     <p>The goal is to add new integrations and maintain existing ones with a high volume of requests (around 30 million
         per day).</p>
     <p>The application must be highly available.</p>
-    <p><span class="fw-bold">Technos: </span><span>NestJS, ExpressJS, AWS, ELK, Kafka, Docker, Grafana, Terraform</span>
+    <p>
+        <span class="fw-bold">Technos: </span><span>NestJS, ExpressJS, Jest, AWS, ELK, Kafka, Docker, Grafana, Terraform</span>
     </p>
 </ng-template>
 
@@ -305,7 +317,8 @@
     <p>Application for group purchase and selling.</p>
     <p>It's a startup-type project that aims to revolutionize group buying and selling in a geolocated way.</p>
     <p>Development in agile method with a back-office to manage listing products and users.</p>
-    <p><span class="fw-bold">Technos: </span><span>NestJS, Angular, Typescript, PostgreSQL, Heroku, Github</span>
+    <p>
+        <span class="fw-bold">Technos: </span><span>NestJS, Angular, Typescript, PostgreSQL, MangoPay, Google Maps API, Heroku, Github</span>
     </p>
 </ng-template>
 

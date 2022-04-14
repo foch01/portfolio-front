@@ -15,12 +15,15 @@ export class AppComponent implements OnInit {
         {
           date: '2017-2020',
           name: 'IMIE - Institut de la Filière Numérique',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque debitis error et facilis fuga iure nemo nostrum obcaecati odio officia officiis, perferendis placeat praesentium qui quidem quisquam repellat suscipit velit.',
+          paragrapheOne: 'During my master\'s degree in IT development, I was able to see the different aspects of the developer/architect profession but also of project management in agile mode or V-cycle and more ambitious technologies such as blockchain.',
+          paragrapheTwo: 'During the 3 years of schooling, the school\'s pedagogy was focused on putting knowledge into practice in mini-projects.',
+          paragrapheThree: 'At the same time, I did a work-study program in the Needone company (3 weeks per month) where I could put into practice some of what I learned at school and vice versa. It\'s a model that I really appreciated during my studies and where I learned a lot.',
         },
         {
           date: '2016-2017',
           name: 'Code Académie',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque debitis error et facilis fuga iure nemo nostrum obcaecati odio officia officiis, perferendis placeat praesentium qui quidem quisquam repellat suscipit velit.',
+          paragrapheOne: 'During this course I confirmed the basics of web development in concrete projects for associations (DDCSPP) or real customers (ARMADA).',
+          paragrapheTwo: 'At the end of school I continued on a full-time internship at the Web agency Everest in Rennes in Brittany.',
         },
       ],
     },
@@ -29,7 +32,8 @@ export class AppComponent implements OnInit {
         {
           date: '2012-2016',
           name: 'BAC S - Lycée Kerneuzec',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque debitis error et facilis fuga iure nemo nostrum obcaecati odio officia officiis, perferendis placeat praesentium qui quidem quisquam repellat suscipit velit.',
+          paragrapheOne: '',
+          paragrapheTwo: '',
         },
       ],
     },

@@ -14,6 +14,9 @@
     top: -100px;
     visibility: hidden;
 }
+[nz-carousel-content] {
+    height: 150px;
+}
 
 .part {
     border-bottom: 1px solid @border-color-base;
@@ -71,8 +74,12 @@ nz-carousel {
 @media (max-width: @screen-md-max) {
     .img {
         height: 70vh !important;
-        object-position: top !important;
+        object-position: 50% 30%;
         margin-top: 58px;
+    }
+
+    .featured-img {
+        position: inherit !important;
     }
 
     .sidebar {
@@ -85,6 +92,11 @@ nz-carousel {
         align-items: inherit !important;
         border-top: 1px solid @border-color-base;
         border-left: inherit !important;
+        position: inherit !important;
+    }
+
+    .part-1 {
+        height: 50vh !important;
     }
 
     .social__button {
@@ -94,6 +106,7 @@ nz-carousel {
 }
 
 @media (min-width: @screen-lg-min) {
+
     .sidebar {
         width: 7%;
         right: 0;
@@ -107,5 +120,40 @@ nz-carousel {
     .col-lg-6 {
         width: 51.33%;
         padding: 0 !important;
+    }
+}
+
+@media (max-width: @screen-sm-max) {
+    .part {
+        padding: 1rem !important;
+    }
+
+    .part-1 {
+        align-items: center !important;
+        height: 70vh !important;
+    }
+
+    [nz-carousel-content] {
+        height: 250px;
+    }
+
+    .info-list {
+        flex-direction: column !important;
+    }
+
+    .flex-column-xs {
+        flex-direction: column;
+    }
+
+    .flex-xs-100 {
+        flex: 100;
+    }
+
+    .text-xs-center {
+        text-align: center !important;
+    }
+
+    .nav-school > button {
+        margin: 0 !important;
     }
 }

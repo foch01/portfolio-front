@@ -4,83 +4,273 @@
             <nz-card (click)="handleOpenModalKering()"  [nzCover]="kering" nzHoverable style="width:100%">
                 <nz-card-meta nzDescription="A proxy to authenticate to more than 50 external APIs (Salesforce, pwc, Stealth...)." nzTitle="Kering"></nz-card-meta>
                 <div class="d-flex justify-content-between mt-3">
-                    <button (click)="handleOpenModalKering();$event.stopPropagation()" [nzSize]="'small'" nz-button nzType="primary">
-                        <i nz-icon nzType="plus"></i>
+                    <button
+                        (click)="handleOpenModalKering();$event.stopPropagation()"
+                        [nzSize]="'small'"
+                        nz-button
+                        nzType="primary">
+                        <i
+                            nz-icon
+                            nzType="plus"></i>
                         details
                     </button>
-                    <a [nzSize]="'small'" href="https://www.kering.com/" nz-button nzType="primary" target="_blank">
-                        <i nz-icon nzType="link"></i>
+                    <a
+                        (click)="$event.stopPropagation()"
+                        [nzSize]="'small'"
+                        href="https://www.kering.com/"
+                        nz-button
+                        nzType="primary"
+                        target="_blank">
+                        <i
+                            nz-icon
+                            nzType="link"></i>
                         View website
                     </a>
                 </div>
             </nz-card>
-            <ng-template #kering>
-                <img alt="example" class="img" src="./assets/kering.png" />
-            </ng-template>
+    <ng-template #kering>
+        <img
+            alt="example"
+            class="img ps-5 pe-5"
+            src="./assets/kering.png"/>
+    </ng-template>
 
-    <nz-card (click)="handleOpenModalGroupy()" [nzCover]="groupy" nzHoverable style="width:100%">
-        <nz-card-meta nzDescription="Application for group purchase." nzTitle="Groupy"></nz-card-meta>
+    <nz-card
+        (click)="handleOpenModalGroupy()"
+        [nzCover]="groupy"
+        nzHoverable
+        style="width:100%">
+        <nz-card-meta
+            nzDescription="Geolocated group purchase and sale web application."
+            nzTitle="Groupy"></nz-card-meta>
         <div class="d-flex justify-content-between mt-3">
-            <button (click)="handleOpenModalGroupy();$event.stopPropagation()" [nzSize]="'small'" nz-button nzType="primary">
-                <i nz-icon nzType="plus"></i>
+            <button
+                (click)="handleOpenModalGroupy();$event.stopPropagation()"
+                [nzSize]="'small'"
+                nz-button
+                nzType="primary">
+                <i
+                    nz-icon
+                    nzType="plus"></i>
                 details
             </button>
-            <a [nzSize]="'small'" href="https://www.kering.com/" nz-button nzType="primary" target="_blank">
-                <i nz-icon nzType="link"></i>
+            <a
+                (click)="$event.stopPropagation()"
+                [nzSize]="'small'"
+                href="https://groupymarket.com/"
+                nz-button
+                nzType="primary"
+                target="_blank">
+                <i
+                    nz-icon
+                    nzType="link"></i>
                 View website
             </a>
         </div>
     </nz-card>
     <ng-template #groupy>
-        <img alt="example" class="img ps-5 pe-5" src="./assets/groupy.png"/>
+        <img
+            alt="example"
+            class="img ps-5 pe-5"
+            src="./assets/groupy.png"/>
     </ng-template>
-    <nz-card [nzCover]="groupy" nzHoverable style="width:100%">
-        <nz-card-meta nzDescription="Application for group purchase." nzTitle="Groupy"></nz-card-meta>
+    <nz-card
+        (click)="handleOpenModalEcarryon()"
+        [nzCover]="ecarryon"
+        nzHoverable
+        style="width:100%">
+        <nz-card-meta
+            nzDescription="Application to manage clients of an accounting agency (VAT, Inputs, turnover...)."
+            nzTitle="e-carryon"></nz-card-meta>
         <div class="d-flex justify-content-between mt-3">
-            <button (click)="handleOpenModalGroupy()" [nzSize]="'small'" nz-button nzType="primary">
-                <i nz-icon nzType="plus"></i>
+            <button
+                (click)="handleOpenModalEcarryon();$event.stopPropagation()"
+                [nzSize]="'small'"
+                nz-button
+                nzType="primary">
+                <i
+                    nz-icon
+                    nzType="plus"></i>
                 details
             </button>
-            <a [nzSize]="'small'" href="https://www.kering.com/" nz-button nzType="primary" target="_blank">
-                <i nz-icon nzType="link"></i>
+            <a
+                (click)="$event.stopPropagation()"
+                [nzSize]="'small'"
+                href="https://e-carryon.fr/"
+                nz-button
+                nzType="primary"
+                target="_blank">
+                <i
+                    nz-icon
+                    nzType="link"></i>
                 View website
             </a>
         </div>
     </nz-card>
-    <ng-template #groupy>
-        <img alt="example" class="img ps-5 pe-5" src="./assets/groupy.png"/>
+    <ng-template #ecarryon>
+        <img
+            alt="example"
+            class="img ps-5 pe-5"
+            src="./assets/ecarryon.png"/>
     </ng-template>
-    <nz-card [nzCover]="groupy" nzHoverable style="width:100%">
-        <nz-card-meta nzDescription="Application for group purchase." nzTitle="Groupy"></nz-card-meta>
+
+    <nz-card
+        (click)="handleOpenModalOnestaff()"
+        [nzCover]="onestaff"
+        nzHoverable
+        style="width:100%">
+        <nz-card-meta
+            nzDescription="Application to manage clients of an accounting agency (VAT, Inputs, turnover...)."
+            nzTitle="Onestaff"></nz-card-meta>
         <div class="d-flex justify-content-between mt-3">
-            <button (click)="handleOpenModalGroupy()" [nzSize]="'small'" nz-button nzType="primary">
-                <i nz-icon nzType="plus"></i>
+            <button
+                (click)="handleOpenModalOnestaff();$event.stopPropagation()"
+                [nzSize]="'small'"
+                nz-button
+                nzType="primary">
+                <i
+                    nz-icon
+                    nzType="plus"></i>
                 details
             </button>
-            <a [nzSize]="'small'" href="https://www.kering.com/" nz-button nzType="primary" target="_blank">
-                <i nz-icon nzType="link"></i>
+            <a
+                (click)="$event.stopPropagation()"
+                [nzSize]="'small'"
+                href="https://e-carryon.fr/"
+                nz-button
+                nzType="primary"
+                target="_blank">
+                <i
+                    nz-icon
+                    nzType="link"></i>
                 View website
             </a>
         </div>
     </nz-card>
-    <ng-template #groupy>
-        <img alt="example" class="img ps-5 pe-5" src="./assets/groupy.png"/>
+    <ng-template #onestaff>
+        <img
+            alt="example"
+            class="img ps-5 pe-5"
+            src="./assets/onestaff.png"/>
     </ng-template>
-    <nz-card [nzCover]="groupy" nzHoverable style="width:100%">
-        <nz-card-meta nzDescription="Application for group purchase." nzTitle="Groupy"></nz-card-meta>
+
+    <nz-card
+        (click)="handleOpenModalLapala()"
+        [nzCover]="lapala"
+        nzHoverable
+        style="width:100%">
+        <nz-card-meta
+            nzDescription="Application to manage clients of an accounting agency (VAT, Inputs, turnover...)."
+            nzTitle="Lapala"></nz-card-meta>
         <div class="d-flex justify-content-between mt-3">
-            <button (click)="handleOpenModalGroupy()" [nzSize]="'small'" nz-button nzType="primary">
-                <i nz-icon nzType="plus"></i>
+            <button
+                (click)="handleOpenModalLapala();$event.stopPropagation()"
+                [nzSize]="'small'"
+                nz-button
+                nzType="primary">
+                <i
+                    nz-icon
+                    nzType="plus"></i>
                 details
             </button>
-            <a [nzSize]="'small'" href="https://www.kering.com/" nz-button nzType="primary" target="_blank">
-                <i nz-icon nzType="link"></i>
+            <a
+                (click)="$event.stopPropagation()"
+                [nzSize]="'small'"
+                href="https://e-carryon.fr/"
+                nz-button
+                nzType="primary"
+                target="_blank">
+                <i
+                    nz-icon
+                    nzType="link"></i>
                 View website
             </a>
         </div>
     </nz-card>
-    <ng-template #groupy>
-        <img alt="example" class="img ps-5 pe-5" src="./assets/groupy.png"/>
+    <ng-template #lapala>
+        <img
+            alt="example"
+            class="img ps-5 pe-5"
+            src="./assets/lapala.png"/>
     </ng-template>
-</div>
+
+    <nz-card
+        (click)="handleOpenModalBlockchainyourIP()"
+        [nzCover]="blockchainyourIP"
+        nzHoverable
+        style="width:100%">
+        <nz-card-meta
+            nzDescription="Application to manage clients of an accounting agency (VAT, Inputs, turnover...)."
+            nzTitle="BlockchainyourIP"></nz-card-meta>
+        <div class="d-flex justify-content-between mt-3">
+            <button
+                (click)="handleOpenModalBlockchainyourIP();$event.stopPropagation()"
+                [nzSize]="'small'"
+                nz-button
+                nzType="primary">
+                <i
+                    nz-icon
+                    nzType="plus"></i>
+                details
+            </button>
+            <a
+                (click)="$event.stopPropagation()"
+                [nzSize]="'small'"
+                href="https://e-carryon.fr/"
+                nz-button
+                nzType="primary"
+                target="_blank">
+                <i
+                    nz-icon
+                    nzType="link"></i>
+                View website
+            </a>
+        </div>
+    </nz-card>
+    <ng-template #blockchainyourIP>
+        <img
+            alt="example"
+            class="img ps-5 pe-5"
+            src="./assets/blockchainyourip.png"/>
+    </ng-template>
+
+    <nz-card
+        (click)="handleOpenModalAmazjob()"
+        [nzCover]="amazjob"
+        nzHoverable
+        style="width:100%">
+        <nz-card-meta
+            nzDescription="Application to manage clients of an accounting agency (VAT, Inputs, turnover...)."
+            nzTitle="Amazjob"></nz-card-meta>
+        <div class="d-flex justify-content-between mt-3">
+            <button
+                (click)="handleOpenModalAmazjob();$event.stopPropagation()"
+                [nzSize]="'small'"
+                nz-button
+                nzType="primary">
+                <i
+                    nz-icon
+                    nzType="plus"></i>
+                details
+            </button>
+            <a
+                (click)="$event.stopPropagation()"
+                [nzSize]="'small'"
+                href="https://e-carryon.fr/"
+                nz-button
+                nzType="primary"
+                target="_blank">
+                <i
+                    nz-icon
+                    nzType="link"></i>
+                View website
+            </a>
+        </div>
+    </nz-card>
+    <ng-template #amazjob>
+        <img
+            alt="example"
+            class="img ps-5 pe-5"
+            src="./assets/amazjob.png"/>
+    </ng-template>
 

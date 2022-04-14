@@ -1,3 +1,4 @@
+@import (multiple) '../../../node_modules/ng-zorro-antd/src/style/themes/default';
 .img {
     object-position: center;
     object-fit: contain;
@@ -9,3 +10,16 @@
 .cards > * {
     flex: 0 0 45%
 }
+
+@media (max-width: @screen-sm-max) {
+    .cards > * {
+        flex: 100%
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1323px) {
+    .cards > * {
+        flex: 100%
+    }
+}
+
