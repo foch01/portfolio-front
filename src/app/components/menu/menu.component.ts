@@ -32,11 +32,13 @@ export class MenuComponent implements OnInit {
   }
 
   handleDropDownMenu(): void {
-    this.isHideMenu = !this.isHideMenu;
-    if (!this.isHideMenu) {
-      this.iconMenu = 'close';
-    } else {
-      this.iconMenu = 'menu';
+    if (this.isDisplayDropDownMenu) {
+      this.isHideMenu = !this.isHideMenu;
+      if (!this.isHideMenu) {
+        this.iconMenu = 'close';
+      } else {
+        this.iconMenu = 'menu';
+      }
     }
   }
 }

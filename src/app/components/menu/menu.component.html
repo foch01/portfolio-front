@@ -20,30 +20,35 @@
         [class.d-none]="isHideMenu"
         class="d-flex ms-auto align-items-center part-2 anchor">
         <a
+            (click)="handleDropDownMenu()"
             href="#intro"
             nz-menu-item
         >
             HOME
         </a>
         <a
+            (click)="handleDropDownMenu()"
             href="#about"
             nz-menu-item
         >
             ABOUT
         </a>
         <a
+            (click)="handleDropDownMenu()"
             href="#portfolio"
             nz-menu-item
         >
             PORTFOLIO
         </a>
         <a
+            (click)="handleDropDownMenu()"
             href="mailto:sanceo.thomas@gmail.com"
             nz-menu-item
         >
             CONTACT
         </a>
         <a
+            (click)="handleDropDownMenu()"
             [nzSize]="'large'"
             class="d-flex align-items-center me-3 fw-bold btn-download pb-0"
             href="./assets/cv.pdf"
@@ -57,7 +62,7 @@
                 nzType="download"></i>
         </a>
         <nz-switch
-            (click)="toggleTheme()"
+            (click)="toggleTheme();handleDropDownMenu()"
             [(ngModel)]="isDarkMode"
             [nzCheckedChildren]="'🌙'"
             [nzUnCheckedChildren]="'☀️'"

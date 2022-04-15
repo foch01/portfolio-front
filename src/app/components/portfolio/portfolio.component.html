@@ -120,7 +120,7 @@
         nzHoverable
         style="width:100%">
         <nz-card-meta
-            nzDescription="Application to manage clients of an accounting agency (VAT, Inputs, turnover...)."
+            nzDescription="Application of jobbing in the hotel and catering industry."
             nzTitle="Onestaff"></nz-card-meta>
         <div class="d-flex justify-content-between mt-3">
             <button
@@ -136,7 +136,7 @@
             <a
                 (click)="$event.stopPropagation()"
                 [nzSize]="'small'"
-                href="https://e-carryon.fr/"
+                href="https://www.onestaff.eu/"
                 nz-button
                 nzType="primary"
                 target="_blank">
@@ -160,7 +160,7 @@
         nzHoverable
         style="width:100%">
         <nz-card-meta
-            nzDescription="Application to manage clients of an accounting agency (VAT, Inputs, turnover...)."
+            nzDescription="Slack application for teleworking staff management."
             nzTitle="Lapala"></nz-card-meta>
         <div class="d-flex justify-content-between mt-3">
             <button
@@ -176,7 +176,7 @@
             <a
                 (click)="$event.stopPropagation()"
                 [nzSize]="'small'"
-                href="https://e-carryon.fr/"
+                href="https://lapala.io/"
                 nz-button
                 nzType="primary"
                 target="_blank">
@@ -200,7 +200,7 @@
         nzHoverable
         style="width:100%">
         <nz-card-meta
-            nzDescription="Application to manage clients of an accounting agency (VAT, Inputs, turnover...)."
+            nzDescription="Application for registration of document copyrights in the blockchain."
             nzTitle="BlockchainyourIP"></nz-card-meta>
         <div class="d-flex justify-content-between mt-3">
             <button
@@ -216,7 +216,7 @@
             <a
                 (click)="$event.stopPropagation()"
                 [nzSize]="'small'"
-                href="https://e-carryon.fr/"
+                href="https://blockchainyourip.com/"
                 nz-button
                 nzType="primary"
                 target="_blank">
@@ -240,7 +240,7 @@
         nzHoverable
         style="width:100%">
         <nz-card-meta
-            nzDescription="Application to manage clients of an accounting agency (VAT, Inputs, turnover...)."
+            nzDescription="Application of jobbing between individuals."
             nzTitle="Amazjob"></nz-card-meta>
         <div class="d-flex justify-content-between mt-3">
             <button
@@ -256,7 +256,7 @@
             <a
                 (click)="$event.stopPropagation()"
                 [nzSize]="'small'"
-                href="https://e-carryon.fr/"
+                href="https://www.relations-publiques.pro/128098/amazjob-la-jeune-pousse-francaise-qui-reinvente-le-jobbing.html"
                 nz-button
                 nzType="primary"
                 target="_blank">
@@ -272,5 +272,46 @@
             alt="example"
             class="img ps-5 pe-5"
             src="./assets/amazjob.png"/>
+    </ng-template>
+
+    <nz-card
+        (click)="handleOpenModalToolbox()"
+        [nzCover]="toolbox"
+        nzHoverable
+        style="width:100%">
+        <nz-card-meta
+            nzDescription="A utility app for my life as a developer."
+            nzTitle="Toolbox"></nz-card-meta>
+        <div class="d-flex justify-content-between mt-3">
+            <button
+                (click)="handleOpenModalToolbox();$event.stopPropagation()"
+                [nzSize]="'small'"
+                nz-button
+                nzType="primary">
+                <i
+                    nz-icon
+                    nzType="plus"></i>
+                details
+            </button>
+            <a
+                (click)="$event.stopPropagation()"
+                [nzSize]="'small'"
+                href="https://toolbox-82f81.web.app/"
+                nz-button
+                nzType="primary"
+                rel="dofollow"
+                target="_blank">
+                <i
+                    nz-icon
+                    nzType="link"></i>
+                View website
+            </a>
+        </div>
+    </nz-card>
+    <ng-template #toolbox>
+        <img
+            alt="example"
+            class="img ps-5 pe-5"
+            src="./assets/toolbox.png"/>
     </ng-template>
 
