@@ -1,6 +1,39 @@
 <h1 class="fw-bold display-4">Portfolio</h1>
 <p class="blue-5 fw-bold">LATEST WORKS</p>
 <div class="d-flex flex-wrap justify-content-between gap-5 cards">
+    <nz-card (click)="handleOpenModalLeocare()"  [nzCover]="leocare" nzHoverable style="width:100%">
+        <nz-card-meta nzDescription="A proxy to authenticate to more than 50 external APIs (Salesforce, pwc, Stealth...)." nzTitle="Kering"></nz-card-meta>
+        <div class="d-flex justify-content-between mt-3">
+            <button
+                (click)="handleOpenModalLeocare();$event.stopPropagation()"
+                [nzSize]="'small'"
+                nz-button
+                nzType="primary">
+                <i
+                    nz-icon
+                    nzType="plus"></i>
+                details
+            </button>
+            <a
+                (click)="$event.stopPropagation()"
+                [nzSize]="'small'"
+                href="https://leocare.eu/"
+                nz-button
+                nzType="primary"
+                target="_blank">
+                <i
+                    nz-icon
+                    nzType="link"></i>
+                View website
+            </a>
+        </div>
+    </nz-card>
+    <ng-template #leocare>
+        <img
+            alt="leocare"
+            class="img ps-5 pe-5"
+            src="./assets/leocare.png"/>
+    </ng-template>
             <nz-card (click)="handleOpenModalKering()"  [nzCover]="kering" nzHoverable style="width:100%">
                 <nz-card-meta nzDescription="A proxy to authenticate to more than 50 external APIs (Salesforce, pwc, Stealth...)." nzTitle="Kering"></nz-card-meta>
                 <div class="d-flex justify-content-between mt-3">

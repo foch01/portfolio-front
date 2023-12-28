@@ -92,15 +92,32 @@
                 <p class="blue-5 fw-bold pb-4">EXPERIENCE AT</p>
                 <div class="d-flex flex-column">
                     <div class="experience mb-4">
-                        <div class="blue-5">08/2017 - 04/2022</div>
+                        <div class="blue-5">09/2022 - In progress</div>
+                        <h3 class="fw-bold">Leocare</h3>
+                        <p>Leocare is a scale-up in the world of neo insurance accessible only from the web and mobile.</p>
+                        <nz-steps
+                            nzDirection="vertical"
+                            nzSize="small">
+                            <nz-step
+                                [nzDescription]="platform"
+                                nzIcon="loading"
+                                nzStatus="process"
+                                nzTitle="10/23 -> In progress - Platform developer"></nz-step>
+                            <nz-step
+                                [nzDescription]="feature"
+                                nzStatus="finish"
+                                nzTitle="09/22 -> 10/23 - Software developer"></nz-step>
+                        </nz-steps>
+                    </div>
+                    <div class="experience mb-4">
+                        <div class="blue-5">08/2017 - 07/2022</div>
                         <h3 class="fw-bold">apini - Needone</h3>
                         <nz-steps
                             nzDirection="vertical"
                             nzSize="small">
                             <nz-step
                                 [nzDescription]="kering"
-                                nzIcon="loading"
-                                nzStatus="process"
+                                nzStatus="finish"
                                 nzTitle="03/21 -> In progress - Kering - Back-end developer (Lead)"></nz-step>
                             <nz-step
                                 [nzDescription]="groupy"
@@ -309,6 +326,23 @@
         </div>
     </div>
 </div>
+
+<ng-template #platform>
+    <p>Creation of squad Platform with 2 other people (Squad Lead & Architect)</p>
+    <p>The objective of this mission was to provide a framework and a technical philosophy to the company.</p>
+    <p>I worked on developer experience, micro service architecture and platform monitoring.</p>
+    <p>
+        <span class="fw-bold">Technos: </span><span>NestJS, Angular, MongoDB Jest, Grafana, Docker</span>
+    </p>
+</ng-template>
+
+<ng-template #feature>
+    <p>The objective of this mission was the creation of new functionality for customers (amendment, generation of certificate, addition of driver...)</p>
+    <p>The work was done in a squad of 10 people (PO, Squad lead, Android & iOS & Web developer) while respecting the Lean method.</p>
+    <p>
+        <span class="fw-bold">Technos: </span><span>NestJS, Angular, MongoDB Jest, Grafana, Docker</span>
+    </p>
+</ng-template>
 
 <ng-template #kering>
     <p>A proxy to authenticate to more than 50 external APIs (Salesforce, pwc, Stealth...).</p>
